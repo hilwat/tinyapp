@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<% include ./partials/_header %>
+<body>
+  <ul>
+    <% for(shorturl in urls){ %>
+    <li><%=  shorturl + " -> " %> <a href="<%= urls[shorturl] %>"><%= urls[shorturl] %></a></li>
+    <a href="/urls/<%= shorturl %>"> Edit </a>
+     <form method="POST" action="/urls/9sm5xK/delete">...
+      <input type="submit" value="Delete"></form>
+    <%} %>
+
+    <!-- Add your EJS code here
+A list or table of the URLs and their shortened forms. If you need a reminder on how to loop through data with EJS, take another peek at the What is a Template Engine? Reading.
+A link for shortening a new URL. This will be a dead link for now (href='#') as we will build the page for this functionality later.
+
+    -->
+  </ul>
+</body>
+</html>
