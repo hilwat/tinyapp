@@ -22,6 +22,9 @@ function generateRandomString() {
 
 const bodyParser = require("body-parser");
 app.use(bodyParser.urlencoded({extended: true}));
+var express = require('express')
+var cookieParser = require('cookie-parser')
+app.use(cookieParser());
 
 app.get("/", (req, res) => {
   res.send("Hello!");
@@ -50,7 +53,9 @@ app.get("/urls.json", (req, res) => {
 //localhost:8080/urls/<shortURL>, where <shortURL> indicates the random string you generated to represent the original URL.
 
 app.get("/urls", (req, res) => {
-  let templateVars = { urls: urlDatabase };
+  let templateVars = { urls: urlDatabase,
+                      username: req.cookies.username
+                      };
   res.render("urls_index", templateVars);
 });
 
@@ -95,5 +100,9 @@ app.post("/urls/:id", (req,res) => {
   res.redirect(`/urls`);         // Respond with 'Ok' (we will replace this)
 });
 
+app.post("/login", (req,res) => {
+  res.cookie('username', req.body.username);
+  res.redirect(`/urls`);        // Respond with 'Ok' (we will replace this)
+});
 
 
