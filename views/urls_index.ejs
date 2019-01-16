@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
 <% include ./partials/_header %>
-<body>
   <ul>
     <% for(shorturl in urls){ %>
     <li><%=  shorturl + " -> " %> <a href="<%= urls[shorturl] %>"><%= urls[shorturl] %></a></li>

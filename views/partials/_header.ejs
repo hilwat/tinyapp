@@ -1,4 +1,15 @@
 <head>
   <title>TinyApp</title>
+  <h1> TinyApp </h1>
 </head>
-
+<body>
+<% if(!username){ %>
+    <form action="/login" method="POST" style="margin:50px;">
+    <label for="username">Username:</label>
+      <input id="username" type="text" name="username" placeholder="enter username" style="width: 120px">
+      <input type="submit" value="Submit">
+      <% } else {%>
+    <form action="/logout" method="POST" style="margin:50px;">
+      <input type="submit" value="Logout">
+    <a> <%= username %> </a>
+    <% } %>
