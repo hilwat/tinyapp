@@ -1,0 +1,40 @@
+@import url(https://fonts.googleapis.com/css?family=Lobster+Two);
+
+h1{
+  font-family: 'Lobster Two';
+  font-style: italic;
+  font-style: bold;
+  color: ##ffd633;
+  font-family: 'Lobster Two';
+  font-size: 225%;
+  display: flex;
+}
+
+h2{
+  color: #241c15;
+}
+
+h4 {
+  color: ##ffd633;
+  font-size: 95%;
+}
+
+h5 {
+  color: ##ffd633;
+  font-size: 95%;
+  text-align: center;
+}
+
+footer{
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+}
+
+
+input[type=text] {
+  background-color: ##ffd633;
+  color: black;
+}
+

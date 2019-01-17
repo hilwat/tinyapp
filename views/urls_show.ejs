@@ -5,7 +5,7 @@
     <% shortURL %>
     <li> Short URL - <%= shortURL  %></li>
     <form action="/urls" method="POST" style="margin:150px;">
-     <input id="longURL" type="Update" name="longURL" placeholder= "<%= longURL %>" style="width: 300px">
+     <input id="longURL" type="Update" name="longURL" placeholder= "<%= longURL %>" style="width: 500px; display:flex">
       <input type="submit" value="Update">
     <% %>
 
@@ -16,4 +16,5 @@ A link for shortening a new URL. This will be a dead link for now (href='#') as 
     -->
   </ul>
 </body>
+<% include ./partials/_footer %>
 </html>
