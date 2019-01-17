@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<% include ./partials/_header %>
+  <ul>
+    <% shortURL %>
+    <li> Short URL - <%= shortURL  %></li>
+    <form action="/urls" method="POST" style="margin:150px;">
+     <input id="longURL" type="Update" name="longURL" placeholder= "<%= longURL %>" style="width: 500px; display:flex">
+      <input type="submit" value="Update">
+    <% %>
+
+    <!-- Add your EJS code here
+A list or table of the URLs and their shortened forms. If you need a reminder on how to loop through data with EJS, take another peek at the What is a Template Engine? Reading.
+A link for shortening a new URL. This will be a dead link for now (href='#') as we will build the page for this functionality later.
+
+    -->
+  </ul>
+</body>
+<% include ./partials/_footer %>
+</html>
