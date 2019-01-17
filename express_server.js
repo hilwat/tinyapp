@@ -6,17 +6,22 @@ app.set("view engine", "ejs");
 app.use(express.static("public"))
 
 var urlDatabase = {
-  "b2xVn2": "http://www.lighthouselabs.ca",
-  "9sm5xK": "http://www.google.com"
-};
+  "userRandomID": {
+    "b2xVn2": "http://www.lighthouselabs.ca",
+    "9sm5xK": "http://www.google.com",
+  },
+  "user2RandomID": {
+    "c2xBn3": "http://www.disney.com",
+  }
+}
 
 const users = {
-  "userRandomID": {
+  "F2": {
     id: "userRandomID",
     email: "user@example.com",
     password: "purple"
   },
- "user2RandomID": {
+ "F2": {
     id: "user2RandomID",
     email: "user2@example.com",
     password: "dishwasher-funk"
