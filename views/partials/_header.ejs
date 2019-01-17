@@ -1,8 +1,6 @@
 <head>
 
-  <link rel = "stylesheet"
-   type = "text/css"
-   href = "/stylesheet/TinyAppCSS.css">
+  <link rel = "stylesheet" type = "text/css"href = "/stylesheet/TinyAppCSS.css">
 
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
@@ -35,28 +33,26 @@
       </button>
       <h1> Hilary's Tiny App</h1>
     </div>
-
+    <% if(!users){ %>
     <!-- Collect the nav links, forms, and other content for toggling -->
     <span class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-      <% if(!username){ %>
       <ul class="nav navbar-nav navbar-right">
-        <form action="/login" method="POST" style="margin:20px; display:flex">
-        <input id="username" type="text" name="username" class="form-control" placeholder="enter username" style="margin-right:5px" >
+        <form action="/login" method="GET" style="margin:10px;">
         <input type="submit" class="btn btn-inverse" value="Login">
+        <form action="/register" method="GET" style="margin:10px;">
+        <input type="submit" class="btn btn-inverse" value="Register">
       </form>
       </ul>
           <% } else {%>
       <ul class="nav navbar-nav navbar-right">
           <form action="/logout" method="POST" style="margin:20px; display:flex">
-           <h4 style="margin-right:15px"> Welcome, <%= username %> </h4>
-          <input type="submit" class="btn btn-inverse" value="Logout" style="margin-right:5px">
+           <h4 style="margin-right:15px"> Welcome, <%= users.email %> </h4>
+          <button type="submit" class="btn btn-inverse" style="margin-right:5px">Logout</button>
       <% } %>
           </form>
         </ul>
     </span>
 </nav>
-<div class="center-block">
-<h2> List of Urls </h2>
 </div>
 
 

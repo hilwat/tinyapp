@@ -2,11 +2,13 @@
 <html lang="en">
 <% include ./partials/_header %>
   <ul>
+    <h2> List of Urls </h2>
     <% for(shorturl in urls){ %>
     <li><%=  shorturl + " -> " %> <a href="<%= urls[shorturl] %>"><%= urls[shorturl] %></a>
       <a href="/urls/<%= shorturl %>"> Edit </a>
-     <form method="POST" action="/urls/9sm5xK/delete">
-      <input type="submit" value="Delete"></form>
+     <form  action="/urls/<%= shorturl %>/delete" method="POST">
+      <input type="submit" value="Delete">
+    </form>
     <%} %>
     </li>
   </ul>

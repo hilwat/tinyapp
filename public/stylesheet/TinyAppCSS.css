@@ -3,9 +3,7 @@
 h1{
   font-family: 'Lobster Two';
   font-style: italic;
-  font-style: bold;
-  color: ##ffd633;
-  font-family: 'Lobster Two';
+  color: #ffd633;
   font-size: 225%;
   display: flex;
 }
@@ -15,12 +13,12 @@ h2{
 }
 
 h4 {
-  color: ##ffd633;
+  color: #ffd633;
   font-size: 95%;
 }
 
 h5 {
-  color: ##ffd633;
+  color: #ffd633;
   font-size: 95%;
   text-align: center;
 }
@@ -34,7 +32,7 @@ footer{
 
 
 input[type=text] {
-  background-color: ##ffd633;
+  background-color: #ffd633;
   color: black;
 }
 
