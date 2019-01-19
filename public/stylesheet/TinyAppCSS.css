@@ -36,3 +36,57 @@ input[type=text] {
   color: black;
 }
 
+.btn-one {
+  color: #241c15;
+  background-color: #ffd633;
+  border-color: #ffd633;
+  border-radius: 4px;
+}
+.btn-one:hover,
+.btn-one:focus,
+.btn-one.focus,
+.btn-one:active,
+.btn-one.active,
+.open > .dropdown-toggle.btn-one {
+  color: #333;
+  background-color: #ffd633;
+  border-color: #ffd633;
+}
+
+.frm{
+  display:inline;
+}
+
+.btn-one {
+  color: #241c15;
+  background-color: #ffd633;
+  border-color: #ffd633;
+  border-radius: 4px;
+}
+.btn-one:hover,
+.btn-one:focus,
+.btn-one.focus,
+.btn-one:active,
+.btn-one.active,
+.open > .dropdown-toggle.btn-one {
+  color: #333;
+  background-color: #ffd633;
+  border-color: #ffd633;
+}
+
+.frm{
+  display:inline;
+}
+
+
+
+
+footer {
+  position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 50px;
+}
+
+

@@ -3,7 +3,9 @@
 <% include ./partials/_header %>
   <ul>
     <h2> Make a New Shortened URL </h2>
-    <form action="/urls" method="POST" style="margin:150px;">
+    <p> Shorten any long URL by typing the web address including the http://www.</p>
+  </ul>
+    <form action="/urls" method="POST" style="margin:40px;">
       <label for="longURL">Create a new shortlink:</label>
       <input id="longURL" type="text" name="longURL" placeholder="http://" style="width: 500px; display:flex">
      <input class="btn btn-default" type="submit" value="Submit">

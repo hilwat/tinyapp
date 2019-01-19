@@ -2,10 +2,10 @@
 <html lang="en">
 <% include ./partials/_header %>
   <ul>
-    <% shortURL %>
-    <li> Short URL - <%= shortURL  %></li>
-    <form action="/urls" method="POST" style="margin:150px;">
-     <input id="longURL" type="Update" name="longURL" placeholder= "<%= longURL %>" style="width: 500px; display:flex">
+    <% ShortURL %>
+    <li> ShortURL - <%= ShortURL  %></li>
+    <form action="/urls/<%= ShortURL %>" method="POST" style="margin:150px;">
+     <input id="LongURL" type="Update" name="longURL" placeholder= "<%= LongURL %>" style="width: 500px; display:flex">
       <input type="submit" value="Update">
     <% %>
 

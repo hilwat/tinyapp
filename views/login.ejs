@@ -1,14 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
-<header>
-</header>
+<% include ./partials/_header %>
+<body>
   <ul>
-Login
-    <li> Login</li>
+<h2> Login </h2>
+    <p> If you <font color=#666600><strong> currently have an account </strong></font> login using your secure email & password</p>
       <form action="/login" method="POST" style="margin:20px; display:flex">
         <input id="email" type="email" name="email" placeholder= "enter email" style="width: 500px; display:flex">
      <input id="password" type="password" name="password" placeholder= "enter password" style="width: 500px; display:flex">
-      <input type="submit" value="Submit">
+      <input class="btn-one" type="submit" value="Submit">
+  </ul>
+  <ul>
+  <p> Having problems logging in? contact <a href="https://en.wikipedia.org/wiki/Mother_Goose"> Mother Goose </a> OR create <a href="/register/">NEW account</a></p>
   </ul>
 </body>
 <% include ./partials/_footer %>

@@ -3,14 +3,19 @@
 <% include ./partials/_header %>
   <ul>
     <h2> List of Urls </h2>
-    <% for(shorturl in urls){ %>
-    <li><%=  shorturl + " -> " %> <a href="<%= urls[shorturl] %>"><%= urls[shorturl] %></a>
-      <a href="/urls/<%= shorturl %>"> Edit </a>
-     <form  action="/urls/<%= shorturl %>/delete" method="POST">
-      <input type="submit" value="Delete">
-    </form>
-    <%} %>
-    </li>
+    <p>  This is a list of URLs only you can access edit & delete. Wondering how to use it?</p>
+    <p> Add the short url (combination of 6 characters) to <strong>website/u/</strong> and it will automatically redirect! Magic!!!</p>
+      <form action="/urls/new/" class="inline">
+    <button class="btn-one" style="margin:20px" > Add new url </button>
+     </form>
+   <% for(shorturl in urls){ %>
+       <div class="row" style="display:flex">
+        ShortURL: <%=  shorturl %>  <---> LongURL:  <a href="<%= urls[shorturl] %>"> <%= urls[shorturl] %> </a>
+        <div style="margin:4px"><form action="/urls/<%= shorturl %>" ><button class="btn btn-warning" >Edit</form> </div>
+          <div style="margin:4px"><form action="/urls/<%= shorturl %>/delete" method="POST" ><button  class="btn btn-danger" type="submit" value="Delete" >Delete</form></div>
+      </div>
+  </div>
+   <%} %>
   </ul>
 </body>
 <% include ./partials/_footer %>
