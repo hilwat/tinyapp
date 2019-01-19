@@ -29,9 +29,13 @@ TinyApp is a full stack web application built with Node and Express that allows 
 Here you are able to:
 
 ✅ Login/Sign Up
+
 ✅ Able to shorten a URL
+
 ✅ Have the shorten URL with /u/shortURL -> redirect to original/long URL
+
 ✅ Edit or Delete your URLs
+
 ✅ Logout
 
 Enjoy the 🍪 & 🔒
