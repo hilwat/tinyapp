@@ -2,11 +2,15 @@
 <html lang="en">
 <% include ./partials/_header %>
   <ul>
+    <h2> Your currently editing a URL </h2>
+    <form action="/urls/" class="inline">
+    <button class="btn-two" style="margin:10px;" >Return to URL list</button>
     <% ShortURL %>
-    <li> ShortURL - <%= ShortURL  %></li>
-    <form action="/urls/<%= ShortURL %>" method="POST" style="margin:150px;">
+    <p> <strong>Your currently editing - <%= ShortURL  %></strong></p>
+    <p> Changes will be reflected on your URL list which you will be redirected to after changes</p>
+    <form action="/urls/<%= ShortURL %>" method="POST" style="margin:50px;">
      <input id="LongURL" type="Update" name="longURL" placeholder= "<%= LongURL %>" style="width: 500px; display:flex">
-      <input type="submit" value="Update">
+      <input class="btn-one" type="submit" value="Update" style="margin:5px;">
     <% %>
 
     <!-- Add your EJS code here
